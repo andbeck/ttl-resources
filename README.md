@@ -2,7 +2,7 @@ Here is the code associated with this web page:
 
 http://www.thetrophiclink.org/?page_id=28
 
-Its code (and some example data files) for:
+It is code (and some example data files) for:
 
 1. Calculating functional diversity (Petchey & Gaston, 2002).
 
