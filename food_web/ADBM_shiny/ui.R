@@ -1,7 +1,8 @@
 #
 
 library(shiny)
-
+library(igraph)
+library(NetIndices)
 
 
 # Define UI for application that draws a histogram
@@ -86,7 +87,8 @@ shinyUI(fluidPage(
       
       withMathJax(),
       includeMarkdown("intro.md"),
-       plotOutput("fwmatrixPlot", width="400px", height="400px")
+      plotOutput("fwmatrixPlot", width="400px", height="400px"),
+      plotOutput("fwgraphPlot", width="200px", height="200px")
     )
   )
 ))

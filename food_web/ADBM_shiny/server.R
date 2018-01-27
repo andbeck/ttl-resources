@@ -52,8 +52,25 @@ shinyServer(function(input, output) {
     
     Plot.matrix(web())
     box()
+  })
+  
+  output$fwgraphPlot <- renderPlot({
+    lay<-matrix(nrow=input$num_S, ncol=2)
+    #lay[,1] <- 1:input$num_S
+    lay[,1] <- runif(input$num_S)*10
+    lay[,2] <- (TrophInd(web())$TL-1)
+    gg <- graph_from_adjacency_matrix(web())
+    par(mar=c(.1,.1,.1,.1))
+    plot.igraph(gg,layout=lay,
+                vertex.label=NA,vertex.size=40,
+                edge.arrow.size=.5,edge.width=.5,
+                rescale=FALSE,
+                ylim=c(0,20), xlim=c(0,11),
+                frame=TRUE)
     
+    ## scale the x spread so its proportional to the number of species in that trophic level
     
   })
+  
   
 })
