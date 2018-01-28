@@ -88,7 +88,7 @@ shinyUI(fluidPage(
       withMathJax(),
       includeMarkdown("intro.md"),
       plotOutput("fwmatrixPlot", width="400px", height="400px"),
-      plotOutput("fwgraphPlot", width="200px", height="200px")
+      plotOutput("fwgraphPlot", width="400px", height="400px")
     )
   )
 ))
